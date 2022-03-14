@@ -1,8 +1,15 @@
 const template = `
-    <h1>Hello Vue3 !!!</h1>
-    <p>Welcome to my vue3 CDN page.</p>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
 `
 
-const OptionsObject = { template }
+const data = () => {
+  return {
+    title: 'Hello Vue3 !',
+    message: 'Welcome User. This is my Vue3 CDN page.',
+  }
+}
+
+const OptionsObject = { template, data }
 
 Vue.createApp(OptionsObject).mount('#app')
